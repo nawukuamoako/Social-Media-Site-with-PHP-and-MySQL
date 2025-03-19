@@ -1,0 +1,23 @@
+create table plainuser (
+    UserID int NOT NULL AUTO_INCREMENT,
+    Username varchar(255) NOT NULL UNIQUE,
+    FirstName varchar(255) NOT NULL, 
+    LastName varchar(255) NOT NULL,
+    Passkey varchar(255) NOT NULL,
+    icon varchar(255) NOT NULL,
+    PRIMARY KEY (UserID)
+    );
+
+insert into plainuser (Username, FirstName, LastName, Passkey, icon) values('testID', 'Test', 'Tester', 'password', 'fa fa-user-circle-o');
+
+
+create table comments (
+    Count int NOT NULL AUTO_INCREMENT,
+    Username varchar(255) NOT NULL,
+    Comment varchar(5000) NOT NULL
+    likes int NOT NULL,
+    icon varchar(255) NOT NULL,
+    PRIMARY KEY (Count)
+    );
+
+insert into comments (Username, Comment) values('testID','This is my first comment, yeah!', 0, 'fa fa-user-circle-o');
